@@ -37,7 +37,7 @@ void main() {
     "should get trivia for the number from repository",
     () async {
       // act
-      final result = await usecase(number: tNumber);
+      final result = await usecase(Params(number: tNumber));
       // assert
       expect(result, Right(tNumberTrivia));
     },
