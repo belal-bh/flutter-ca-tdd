@@ -4,7 +4,9 @@ import 'package:flutter_ca_tdd/features/number_trivia/domain/entities/number_tri
 import 'package:flutter_ca_tdd/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 import 'package:flutter_ca_tdd/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
 import 'package:flutter_test/flutter_test.dart';
+// import "package:mockito/mockito.dart";
 
+//! Bad Mock
 class MockNumberTriviaRepository implements NumberTriviaRepository {
   @override
   Future<Either<Failure, NumberTrivia>> getRandomNumberTrivia() {
@@ -19,6 +21,10 @@ class MockNumberTriviaRepository implements NumberTriviaRepository {
         () => Right(NumberTrivia(text: "test", number: number)));
   }
 }
+
+//! Does not work with Mock Need to check later
+// class MockNumberTriviaRepository extends Mock
+//     implements NumberTriviaRepository {}
 
 void main() {
   late GetConcreteNumberTrivia usecase;
@@ -36,6 +42,10 @@ void main() {
   test(
     "should get trivia for the number from repository",
     () async {
+      // arrange
+      //! Need when use mockito
+      // when(mockNumberTriviaRepository.getConcreteNumberTrivia(1))
+      //     .thenAnswer((realInvocation) async => Right(tNumberTrivia));
       // act
       final result = await usecase(Params(number: tNumber));
       // assert
