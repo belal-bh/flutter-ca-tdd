@@ -3,7 +3,6 @@ import 'package:flutter_ca_tdd/core/error/failures.dart';
 import 'package:flutter_ca_tdd/core/error/usecases/usecase.dart';
 import 'package:flutter_ca_tdd/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:flutter_ca_tdd/features/number_trivia/domain/repositories/number_trivia_repository.dart';
-import 'package:flutter_ca_tdd/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
 import 'package:flutter_ca_tdd/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
 import 'package:flutter_test/flutter_test.dart';
 
