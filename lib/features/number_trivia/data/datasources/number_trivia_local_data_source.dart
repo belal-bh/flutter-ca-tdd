@@ -1,11 +1,11 @@
-import 'package:flutter_ca_tdd/features/number_trivia/data/models/number_trivia_model.dart';
+import '../../domain/entities/number_trivia.dart';
 
 abstract class NumberTriviaLocalDataSource {
-  /// Gets the cached [NumberTriviaModel] which was gotten the last time
+  /// Gets the cached [NumberTrivia] which was gotten the last time
   /// the user had an internet connection.
   ///
   /// Throws [CacheException] if no cached data is present.
-  Future<NumberTriviaModel> getLastNumberTrivia();
+  Future<NumberTrivia> getLastNumberTrivia();
 
-  Future<void> cacheNumberTrivia(NumberTriviaModel triviaToCache);
+  Future<void> cacheNumberTrivia(NumberTrivia triviaToCache);
 }
